@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log(Date.now())
+		var dt = new Date()
+		var arrL = ['a', 'b', 'c', 'd']
+		var arrN = [1, 2, 3, 4]
+		var arrU = [1, 3, 5, 6, 4, 2]
+		arrL.forEach(function(item, index)) {
+			console.log(index, item)
+		}
+		var resultE = arrN.every(function (item, index) {
+			if (item < 5) {
+				return true
+			}
+		})
+		var resultS = arrN.some(function (item, index) {
+			if (item < 5) {
+				return true
+			}
+		})
+		console.log(resultE)
+		console.log(resultS)
+		var S2L = arrU.sort(function (a, b) {
+			return a-b
+		})
+		var L2S = arrU.sort(function (a, b) {
+			return b-a
+		})
+		console.log(S2L)
+		console.log(L2S)
+		var arrM = arrN.map(function (item, index) {
+			return '<b>' + item + '-' + index + '</b>'
+		})
+		var arrF = arrN.filter(function (item, index) {
+			if (item > 2) {
+				return true
+			}
+		})
+		console.log(arrM)
+		console.log(arrF)
+
+		var obj = {
+			x: 100,
+			y: 200,
+			z:300
+		}
+		for (var key in obj) {
+			if (obj.hasOwnProperty(key)) {
+				console.log(key, obj[key])
+			}
+		}
+	</script>
+</body>
+</html>
